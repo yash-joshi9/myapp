@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+ <meta charset="UTF-8">
+ <title>Details</title>
+        <link rel="stylesheet" href="../../mysiteS21/static/myapp/style.css">
+
+</head>
+<body>
+ {% if topic_ %}
+ <h2>Main Topic</h2>
+ <H1>
+    {{topic_}}
+ </H1>
+<ol>
+ {% for i in course_ %}
+ <li> {{ i.title}} </li>
+ {% endfor %}
+ </ol>
+ {% else %}
+ <strong>There are no available topics!</strong>
+ {% endif %}
+    <p><a href="{% url 'myapp:index' %}">Myapp page</a></p>
+
+</body>
+</html>/

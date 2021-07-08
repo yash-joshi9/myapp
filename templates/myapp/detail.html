@@ -1,0 +1,17 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+   {% if topic_ %}
+ <h2>Main Topic</h2>
+ <H1>
+    {{topic_}}
+ </H1>
+<ol>
+ {% for i in course_ %}
+ <li> {{ i.title}} </li>
+ {% endfor %}
+ </ol>
+ {% else %}
+ <strong>There are no available topics!</strong>
+ {% endif %}
+
+{% endblock %}

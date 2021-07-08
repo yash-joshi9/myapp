@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<link lang="en">
+ <meta charset="UTF-8">
+ <title>E-Learning WebApp!</title>
+    <link rel="stylesheet" href="../../mysiteS21/static/myapp/style.css">
+</head>
+<body>
+ {% if top_list %}
+ <h2>List of Topics</h2>
+ <ol>
+ {% for top in top_list %}
+ <li> {{ top.name}} </li>
+ {% endfor %}
+ </ol>
+ {% else %}
+ <strong>There are no available topics!</strong>
+ {% endif %}
+
+</body>
+</html>/
